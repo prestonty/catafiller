@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+// webcam
+import Webcam from "react-webcam";
+
 export default function Profile(props) {
     const [fname, setfname] = useState("first name");
     const [lname, setlname] = useState("last name");
@@ -89,6 +92,10 @@ export default function Profile(props) {
             <p>{postalCode}</p>
             <p>{city}</p>
             <p>{province}</p>
+
+
+            {/* WEBCAM COOL STUFF */}
+            <Webcam />
         </div>
     );
 }
