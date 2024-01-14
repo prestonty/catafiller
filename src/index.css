@@ -20,6 +20,23 @@ div {
   letter-spacing: -3px;
 }
 
+.smallheader {
+  color: #7dcaca;
+  text-align: center;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 28px */
+  letter-spacing: -0.56px;
+}
+
+.photogrey {
+  width: 399px;
+  height: 298px;
+  flex-shrink: 0;
+  background: #d9d9d9;
+}
+
 @font-face {
   font-family: "kodchasan";
   src: url(*/public/fonts/Kodchasan-Bold.ttf);
