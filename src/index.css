@@ -1,13 +1,50 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+div {
+  max-width: 645px;
+  max-height: 1398px;
+  background-color: #f8f8f8;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.title {
+  background: linear-gradient(98deg, #7dcaca 0%, #c0e7e7 96.26%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 60px */
+  letter-spacing: -3px;
+}
+
+@font-face {
+  font-family: "kodchasan";
+  src: url(*/public/fonts/Kodchasan-Bold.ttf);
+}
+
+@font-face {
+  font-family: "montbold";
+  src: url(*/public/fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+  font-family: "montsemibold";
+  src: url(*/public/fonts/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "montmedium";
+  src: url(*/public/fonts/Montserrat-Medium.ttf);
+}
+
+@font-face {
+  font-family: "mont";
+  src: url(*/public/fonts/Montserrat-Regular.ttf);
+}
+
+root {
+  background-color: #ffffff;
 }
