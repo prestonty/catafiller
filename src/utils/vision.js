@@ -135,6 +135,3 @@ bmp('./public/randompics/downloajhnjvewqiufobvewquhifebw.png');
 //   scanImage();
 // scanImageCoords();
 
-scanImage();
-// scanImageCoords();
-// scanForImageCoords();
