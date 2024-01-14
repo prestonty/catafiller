@@ -1,5 +1,5 @@
 const vision = require('@google-cloud/vision');
-
+const fs = require('fs');
 // Creates a client
 const client = new vision.ImageAnnotatorClient();
 
@@ -26,12 +26,18 @@ async function scanImage() {
 async function scanImageCoords() {
     try {
       // Performs text detection on the local file
-      const [result] = await client.LocalizedObjectAnnotation (fileName);
-      const detections = result.textAnnotations;
-      console.log('Text:');
-      detections.forEach(text => console.log(text));
+      const request = {
+        image: {content: fs.readFileSync(fileName)},
+      };
       
-      // rest of your code using the result
+      const [result] = await client.objectLocalization(request);
+      const objects = result.localizedObjectAnnotations;
+      objects.forEach(object => {
+        console.log(`Name: ${object.name}`);
+        console.log(`Confidence: ${object.score}`);
+        const vertices = object.boundingPoly.normalizedVertices;
+        vertices.forEach(v => console.log(`x: ${v.x}, y:${v.y}`));
+      });
     } catch (error) {
       console.error("Error:", error);
     }
