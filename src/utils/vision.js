@@ -131,7 +131,7 @@ async function bmp(path) {
 }
 
 
-bmp('./public/randompics/downloajhnjvewqiufobvewquhifebw.png');
+bmp('./public/healthCards/healthCard1.jpg');
 //   scanImage();
 // scanImageCoords();
 
