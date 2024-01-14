@@ -1,7 +1,8 @@
 import React, { useCallback, useRef, useState } from "react";
 import Webcam from "react-webcam";
 
-function Cam() {
+function Cam
+() {
   const [img, setImg] = useState(null);
   const webcamRef = useRef(null);
 
