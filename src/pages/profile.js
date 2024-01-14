@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import Cam from "./components/cam.js";
+import Cam from "../components/cam.js";
 
 export default function Profile(props) {
     const [fname, setfname] = useState("first name");
@@ -92,7 +92,7 @@ export default function Profile(props) {
             <p>{province}</p>
 
             {/* WEBCAM COOL STUFF */}
-            {/* <Cam/> */}
+            
             {/* <Webcam
                 audio={false}
                 height={720}
@@ -112,8 +112,8 @@ export default function Profile(props) {
                     
 
             </Webcam> */}
-            {/* <h1>{imageSrc}</h1> */}
-
+            {/* <CustomWebcam/> */}
+            <Cam/>
         </div>
     );
 }
