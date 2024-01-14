@@ -20,6 +20,21 @@ async function scanImage() {
     } catch (error) {
       console.error("Error:", error);
     }
-  }
+}
+
+
+async function scanImageCoords() {
+    try {
+      // Performs text detection on the local file
+      const [result] = await client.LocalizedObjectAnnotation (fileName);
+      const detections = result.textAnnotations;
+      console.log('Text:');
+      detections.forEach(text => console.log(text));
+      
+      // rest of your code using the result
+    } catch (error) {
+      console.error("Error:", error);
+    }
+}
 
   scanImage();
