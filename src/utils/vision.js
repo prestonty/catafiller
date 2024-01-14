@@ -73,4 +73,35 @@ async function scanForImageCoords() {
 }
 
 
-  scanImage();
+async function scanForImageCoords() {
+    try {
+        const cv = require('opencv4nodejs');
+
+        // Load the main image
+        const mainImagePath = './public/randompics/downloajhnjvewqiufobvewquhifebw.png';
+        const mainImage = cv.imread(mainImagePath);
+        
+        // Load the template image (the image you want to find within the main image)
+        const templateImagePath = './public/randompics/image432.png';
+        const templateImage = cv.imread(templateImagePath);
+        
+        // Match the template image within the main image
+        const matched = mainImage.matchTemplate(templateImage, 5);
+        
+        // Get the location of the best match
+        const { maxLoc } = matched.minMaxLoc();
+        
+        // Display the result
+        mainImage.drawRectangle(
+          new cv.Rect(maxLoc.x, maxLoc.y, templateImage.cols, templateImage.rows),
+          new cv.Vec(0, 255, 0), // Green color
+        );
+        cv.imshowWait('Result', mainImage);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+}
+
+
+//   scanImage();
+scanImageCoords();
