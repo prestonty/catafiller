@@ -102,6 +102,34 @@ async function scanForImageCoords() {
     }
 }
 
+async function bmp(path) {
+  var CloudmersiveImageApiClient = require('cloudmersive-image-api-client');
+  var defaultClient = CloudmersiveImageApiClient.ApiClient.instance;
+  
+  // Configure API key authorization: Apikey
+  var Apikey = defaultClient.authentications['Apikey'];
+  Apikey.apiKey = '821a1b32-fbf2-4d18-91cb-11cd0c20bebb';
+  
+  
+  
+  var apiInstance = new CloudmersiveImageApiClient.ConvertApi();
+  
+  var imageFile = Buffer.from(fs.readFileSync(path).buffer); // File | Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.
+  
+  
+  var callback = function(error, data, response) {
+    if (error) {
+      console.error(error);
+    } else {
+      console.log('API called successfully. Returned data: ' + data);
+    }
+  };
+  apiInstance.convertToBmp(imageFile, callback);
 
+
+}
+
+
+bmp('./public/randompics/downloajhnjvewqiufobvewquhifebw.png');
 //   scanImage();
-scanImageCoords();
+// scanImageCoords();
