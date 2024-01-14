@@ -1,3 +1,5 @@
+import Cam from './cam.jsx';
+
 const Capsule = () => {
     return(
         <>
@@ -5,6 +7,7 @@ const Capsule = () => {
         <img className="h-16 my-4 mb-8" src="../images/notification.png"></img>
         <img className="h-42 my-4 mb-8" src="../images/fluoxbig.png"></img>
         <img className="h-42 my-4 mb-8" src="../images/lorazebig.png"></img>
+        <Cam/>
         </div>        
         </>
     )
