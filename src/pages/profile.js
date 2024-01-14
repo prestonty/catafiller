@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-
-// webcam
-import Webcam from "react-webcam";
+// import Cam from "./components/cam.js";
 
 export default function Profile(props) {
     const [fname, setfname] = useState("first name");
@@ -93,9 +91,29 @@ export default function Profile(props) {
             <p>{city}</p>
             <p>{province}</p>
 
-
             {/* WEBCAM COOL STUFF */}
-            <Webcam />
+            {/* <Cam/> */}
+            {/* <Webcam
+                audio={false}
+                height={720}
+                screenshotFormat="image/jpg"
+                width={1280}
+                videoConstraints={videoConstraints}>
+                    
+                    {({ getScreenshot }) => (
+                    <button
+                      onClick={() => {
+                        setImageSrc(getScreenshot());
+                      }}
+                    >
+                      Capture photo
+                    </button>
+                  )}
+                    
+
+            </Webcam> */}
+            {/* <h1>{imageSrc}</h1> */}
+
         </div>
     );
 }

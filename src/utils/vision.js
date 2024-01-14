@@ -43,4 +43,5 @@ async function scanImageCoords() {
     }
 }
 
-  scanImage();
+//   scanImage();
+scanImageCoords();
