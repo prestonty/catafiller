@@ -117,6 +117,8 @@ async function bmp(path) {
   
   var imageFile = Buffer.from(fs.readFileSync(path).buffer); // File | Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.
   
+  console.log("asdfhafoweqhoibfoiqwnelkfnioawfnqwe");
+
   
   var callback = function(error, data, response) {
     if (error) {
